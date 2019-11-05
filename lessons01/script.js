@@ -41,7 +41,7 @@
 
 // console.log(9 === 9);
 
-console.log("------- prompt -------");
+// console.log("------- prompt -------");
 
 // const str = 4;
 // console.log(typeof str === "string");
@@ -66,7 +66,7 @@ console.log("------- prompt -------");
 
 // console.log(message);
 
-console.log("------------");
+// console.log("------------");
 
 // let hasUserInfo = prompt("enter some seasons ..");
 
@@ -129,7 +129,7 @@ console.log("------------");
 //   console.log("sorry");
 // }
 
-const string = "Contrary to popular belief, there are sometimes better";
+// const string = "Contrary to popular belief, there are sometimes better";
 // console.log(string[]);
 // if (string.length > 30) {
 //   console.log(string.slice(0, 30));
@@ -137,16 +137,133 @@ const string = "Contrary to popular belief, there are sometimes better";
 // console.log(string.length > 30);
 // console.log(string.toUpperCase());
 
-const polindrom = prompt("enter word");
+// const polindrom = prompt("enter word");
 
-if (
-  polindrom ===
-  polindrom
-    .split("")
-    .reverse()
-    .join("")
-) {
-  console.log("polindrom");
-} else {
-  console.log("some words");
+// if (
+//   polindrom ===
+//   polindrom
+//     .split("")
+//     .reverse()
+//     .join("")
+// ) {
+//   console.log("polindrom");
+// } else {
+//   console.log("some words");
+// }
+
+//---------- part 2 ----------
+
+// const hasUser = prompt("enter some word ..");
+// if (hasUser) {
+//   console.log(hasUser);
+//   hasUser === "work"
+//     ? console.log("work")
+//     : hasUser === "JavaScript"
+//     ? console.log("JavaScript")
+//     : console.log("ne ok");
+// } else {
+//   console.error("отмена");
+// }
+
+//------- циклы ------
+
+// let hesInfo;
+// const getNumContinue = Number(prompt("enter number"));
+
+// let count = 0;
+// let result = 0;
+
+// while (count < getNum) {
+//   count += 1;
+//   if (count === getNumContinue) {
+//     result = count;
+//     continue;
+//   }
+//   console.log(count);
+// }
+
+// console.log("result", result);
+
+//----- цикл while ------
+
+// while (true) {
+//   hesInfo = prompt("enter number");
+
+//   if (hesInfo === null) {
+//     break;
+//   }
+
+//   let getNumber = Number(hesInfo);
+
+//   result = result + getNumber;
+// }
+
+// // console.log("общий результат " + result);
+// console.log(`общий результат ${result}`);
+
+//------ do while
+
+// do {
+//   hesInfo = prompt("enter number");
+
+//   let getNumber = Number(hesInfo);
+
+//   result = result + getNumber;
+// } while (hesInfo !== null);
+
+// alert(result);
+
+//----- arr -----
+
+// const arr = [12, 43, 54, 65, 77, 43, 32, 35, 76, 121];
+// let count = 0;
+// const newArr = [];
+// console.log(arr[arr.length -1]);
+
+// for (let index = 0; index <= arr.length; index += 1) {
+//   if (arr[index] % 2 === 0) {
+//----- push ----
+//     newArr.push(arr[index]);
+//   }
+// }
+
+// console.log(newArr);
+
+// //------ for of ---
+
+// for (let elem of arr) {
+//   if (elem % 2 === 0) {
+//     newArr.push(elem);
+//   }
+// }
+
+// console.log(newArr);
+
+let getNumContinue;
+const arr = [];
+
+let count = 0;
+
+do {
+  getNumContinue = prompt("enter number");
+
+  if (!isNaN(getNumContinue)) {
+    arr.push(Number(getNumContinue));
+  }
+} while (getNumContinue !== null);
+
+console.log(arr);
+
+//------ use for of
+// for (let number of arr) {
+//   count += number;
+// }
+
+//------- use for
+
+for (let i = 0; i < arr.length; i++) {
+  console.log(arr[i]);
+  count += arr[i];
 }
+
+console.log(count);
