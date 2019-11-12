@@ -139,27 +139,78 @@ const shop = buyer => {
 
 //--------- this ---------
 
-const showAboutUser = function() {
+const showAboutUser = function(age, isActive) {
+  console.log(age);
+  console.log(isActive);
   console.log(this);
   console.log(this.name);
+  console.log(this.work);
+  console.log(this.num + this.age + age);
 };
 
 const user = {
   name: "Jon",
   work: "frontend",
-  show: function() {
-    console.log(this);
-    console.log(this.work);
+  show: function(message) {
+    console.log(message);
+  },
+  notFindThis: function() {
+    const fn = () => {
+      console.log("fn", this);
+    };
+    fn();
   }
 };
 
 const girl = {
   name: "Jina",
-  work: "backend"
+  work: "backend",
+  num: 40,
+  age: [3, 4, 5, 6, 7]
 };
 
-// showAboutUser.call(user);
-// showAboutUser.call(girl);
-const res = user.show.bind(girl);
+const boy = {
+  name: "Kent",
+  work: "frontend",
+  num: 20,
+  age: [3, 4, 5, 6, 7]
+};
 
+// user.notFindThis.call(boy);
+const res = user.notFindThis.bind(boy);
 res();
+
+// console.log(girl);
+// showAboutUser.apply(girl, [30, true]);
+
+// user.show.bind(girl)();
+
+// user.notFindThis();
+
+//------------ callback ------
+// const refresh = function(callback) {
+//   console.log(callback);
+//   const res = callback("some text");
+//   console.log(res);
+// };
+
+// refresh(user.show);
+
+const hotel = {
+  name: "Resort Hotel",
+  showThis() {
+    console.log(this);
+  }
+};
+
+// hotel.showThis();
+
+const fn2 = function(callback) {
+  callback();
+  // const someObject = {
+  //   name: "inner fn"
+  // };
+  // callback.call(someObject);
+};
+
+// fn2(hotel.showThis.bind(hotel));
