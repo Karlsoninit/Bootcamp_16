@@ -1,3 +1,4 @@
+// import Game from "./func.js";
 // const shop = {
 //   cashier: "Julia",
 //   products: [],
@@ -77,7 +78,7 @@ const Shop = function(name, mass) {
 
 // вызовы для провеки по каждому продавцу по отдельности
 
-// const cashierAm = new Shop("Julia", fruits);
+const cashierAm = new Shop("Julia", fruits);
 // cashierAm.sale("grapes", 13);
 // cashierAm.sale("grapes", 20);
 // cashierAm.sale("grapes", 12);
@@ -100,9 +101,154 @@ const Shop = function(name, mass) {
 
 // console.log(allProducts);
 
-const cashierPm = new Shop("Tanya", fruits);
+// const cashierPm = new Shop("Tanya", fruits);
 
-cashierPm.sale("grapes", 20);
-cashierPm.sale("grapes", 120);
-cashierPm.sale("grapes", 4);
-cashierPm.sale("grapes", 1);
+// cashierPm.sale("grapes", 20);
+// cashierPm.sale("grapes", 120);
+// cashierPm.sale("grapes", 4);
+// cashierPm.sale("grapes", 1);
+
+//---------- prototype ----------
+
+// const men = Object.create({});
+// men.name = "Ken";
+// men.bike = "Bmw";
+
+// console.log(men);
+
+// const girl = Object.create(men);
+// girl.name = "Barbie";
+// girl.crown = true;
+// console.log(girl);
+
+// const girlFriends = Object.create(girl);
+
+// console.log(girlFriends.crown);
+// console.log(girlFriends.bike);
+
+Object.prototype.showName = function() {
+  console.log(this.name);
+};
+
+// girl.showName();
+
+//------- old method ----
+// const men = {
+//   name: "Ken"
+// };
+
+// const girl = {};
+
+// girl.__proto__ = men;
+
+// console.log(girl.name);
+
+// console.log(men);
+
+//------------------ game -------------
+
+// const Game = function(name, weapon) {
+//   this.name = name;
+//   this.weapon = weapon;
+// };
+
+// Game.prototype.showPlayerName = function() {
+//   console.log(this.name);
+//   console.log(this.hp);
+// };
+// Game.prototype.Jump = function() {
+//   console.log("jupm");
+// };
+
+// const game = new Game("Goro", "knife");
+
+// console.log(game);
+
+// //---------- new palyer
+
+// const PlayerOne = function(name, hp, weap) {
+//   Game.call(this, name);
+//   this.hp = hp;
+//   this.wea = weap;
+//   this.hit = function() {
+//     console.log("hit");
+//   };
+// };
+
+// PlayerOne.prototype = Object.create(Game.prototype);
+// PlayerOne.prototype.constructor = PlayerOne;
+
+// const playerOne = new PlayerOne("Rodion", 100, "gun");
+// // console.log(playerOne);
+// // console.log(playerOne.constructor);
+// // playerOne.showPlayerName();
+
+// console.log(playerOne);
+
+// -------------- class --------- //
+
+class Game {
+  constructor(name, weapon) {
+    this.name = name;
+    this.weapon = weapon;
+  }
+  // get name() {
+  //   return this._name;
+  // }
+  // set name(value) {
+  //   this._name = value;
+  // }
+
+  showAboutPlayer() {
+    console.log(this.name);
+  }
+
+  sayAllPeoplewRenamePlayer() {
+    console.log(`name player rename ${this.name}`);
+  }
+
+  rename(value) {
+    this.name = value;
+    this.sayAllPeoplewRenamePlayer();
+  }
+
+  static CallMethod(value) {
+    console.log(value);
+  }
+
+  add(a, b) {
+    return a + b;
+  }
+}
+
+const game = new Game("Ben", "gun");
+const result = game.add(3, 5);
+console.log(result);
+Game.CallMethod(result);
+// game.showAboutPlayer();
+
+// console.log(game.name);
+// game.name = "NewName";
+game.rename("Rodion");
+// console.log(game._name);
+console.log(game);
+// console.log(game);
+// class PlayerOne extends Game {
+//   constructor(name, weapon, hp) {
+//     super(name, weapon);
+//     this.hp = hp;
+//   }
+
+//   show() {
+//     super.showAboutPlayer();
+//   }
+// }
+
+// const playerOne = new PlayerOne("Ben", "gun", 100);
+
+// playerOne.name = "NewName";
+// playerOne.name;
+// console.log(playerOne);
+// playerOne.show();
+
+//------------
