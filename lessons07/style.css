@@ -1,0 +1,32 @@
+.List_item {
+    font-size: 40px;
+    color: tomato;
+}
+
+
+.list {
+    list-style: none
+}
+
+.box_tomato {
+    width: 200px;
+    height: 200px;
+    background-color: tomato
+}
+
+
+.box_blue {
+    width: 200px;
+    height: 200px;
+    background-color: blue
+}
+
+.pos {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+
+}
