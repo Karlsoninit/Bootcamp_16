@@ -30,3 +30,9 @@
     transform: translate(-50%, -50%);
 
 }
+
+.taskKontainer {
+    width: 300px;
+    height: 70px;
+    border: 1px solid green
+}

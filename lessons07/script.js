@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 import imageArr from "./image.js";
 import ref from "./refs.js";
 import Draw from "./class.js";
@@ -82,7 +82,7 @@ const drawInnerBody = new Draw();
 //   console.log(total++);
 // }, 1000);
 
-console.log(imageArr);
+// console.log(imageArr);
 
 // const container = document.querySelector(".container");
 
@@ -107,12 +107,14 @@ console.log(imageArr);
 //   return drawImage;
 // };
 
-ref.body.insertAdjacentHTML("beforeend", drawInnerBody.draw(imageArr));
+// ref.body.insertAdjacentHTML("beforeend", drawInnerBody.draw(imageArr));
 
-ref.getImage.forEach(
-  image =>
-    (image.onclick = function(e) {
-      console.log(e.target);
-      e.target.classList.toggle("pos");
-    })
-);
+// document.querySelectorAll(".imageContainer img").forEach(
+//   image =>
+//     (image.onclick = function(e) {
+//       console.log(e.target);
+//       e.target.classList.toggle("pos");
+//     })
+// );
+
+//---------------- replay ---------
