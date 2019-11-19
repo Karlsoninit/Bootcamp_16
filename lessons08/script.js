@@ -55,32 +55,32 @@
 const galleryItems = [
   {
     preview: "./image/christ.jpg",
-    fullview: "./image/christ.jpg",
+    fullview: "./image/christ-the-redeemer-Big.jpg",
     alt: "alt text 1"
   },
   {
     preview: "./image/man-and-woman.jpeg",
-    fullview: "./image/man-and-woman.jpeg",
+    fullview: "./image/man-and-woman-Big.jpeg",
     alt: "alt text 2"
   },
   {
     preview: "./image/people-inside.jpeg",
-    fullview: "./image/people-inside.jpeg",
+    fullview: "./image/people-inside-building-Big.jpeg",
     alt: "alt text 3"
   },
   {
     preview: "image/photo-of-cloud.jpeg",
-    fullview: "image/photo-of-cloud.jpeg",
+    fullview: "image/photo-of-cloud-Big.jpeg",
     alt: "alt text 4"
   },
   {
     preview: "image/two-men-performs.jpeg",
-    fullview: "image/two-men-performs.jpeg",
+    fullview: "image/two-men-performs-Big.jpeg",
     alt: "alt text 5"
   },
   {
     preview: "image/woman-wearing.jpeg",
-    fullview: "image/woman-wearing.jpeg",
+    fullview: "image/woman-wearing-Big.jpeg",
     alt: "alt text 6"
   }
 ];
