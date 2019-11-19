@@ -59,28 +59,77 @@ const galleryItems = [
     alt: "alt text 1"
   },
   {
-    preview: "./image/man-and-woman.jpeg",
-    fullview: "./image/man-and-woman-Big.jpeg",
+    preview: "./image/man-and-woman.jpg",
+    fullview: "./image/man-and-woman-Big.jpg",
     alt: "alt text 2"
   },
   {
-    preview: "./image/people-inside.jpeg",
-    fullview: "./image/people-inside-building-Big.jpeg",
+    preview: "./image/people-inside.jpg",
+    fullview: "./image/people-inside-building-Big.jpg",
     alt: "alt text 3"
   },
   {
-    preview: "image/photo-of-cloud.jpeg",
-    fullview: "image/photo-of-cloud-Big.jpeg",
+    preview: "./image/photo-of-cloud.jpg",
+    fullview: "./image/photo-of-cloud-Big.jpg",
     alt: "alt text 4"
   },
   {
-    preview: "image/two-men-performs.jpeg",
-    fullview: "image/two-men-performs-Big.jpeg",
+    preview: "./image/two-men-performs.jpg",
+    fullview: "./image/two-men-performs-Big.jpg",
     alt: "alt text 5"
   },
   {
-    preview: "image/woman-wearing.jpeg",
-    fullview: "image/woman-wearing-Big.jpeg",
+    preview: "./image/woman-wearing.jpg",
+    fullview: "./image/woman-wearing-Big.jpg",
     alt: "alt text 6"
   }
 ];
+
+// console.log(galleryItems);
+
+const refs = {
+  preview: document.querySelector(".preview"),
+  fullview: document.querySelector(".fullview"),
+  imageGallery: document.querySelector(".image-gallery")
+};
+
+// console.log(refs.preview);
+
+const createSmallImage = arr => {
+  refs.fullview.innerHTML = `<img class='image' src='${galleryItems[0].fullview}'/>`;
+  const drawPreview = arr.map(elem => {
+    // console.log(elem.preview);
+
+    return `<li class='list_container'><img class='image' src='${elem.preview}'  data-fullview='${elem.fullview}'/></li>`;
+  });
+
+  refs.preview.insertAdjacentHTML("beforeend", drawPreview.join(""));
+  // console.log(drawPreview);
+};
+
+createSmallImage(galleryItems);
+
+const showPreview = evt => {
+  if (
+    evt.target.nodeName !== "IMG" ||
+    Object.keys(evt.target.dataset).length === 0
+  ) {
+    return;
+  }
+  // console.log(evt.target);
+  // console.log(Object.keys(evt.target.dataset).length);
+  const bigImage = evt.target.dataset.fullview;
+  const replaceFullview = refs.fullview.firstChild;
+  // console.log(replaceFullview);
+
+  replaceFullview.setAttribute("src", `${bigImage}`);
+};
+
+refs.imageGallery.addEventListener("click", showPreview);
+
+// const someObj = {
+//   name: "Max",
+//   age: 18
+// };
+
+// console.log(Object.keys(someObj).length);
