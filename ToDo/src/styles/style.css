@@ -1,0 +1,20 @@
+.form {
+    width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+    padding: 20px;
+    border-radius: 20px;
+    align-items: center
+}
+
+.task {
+    width: 200px;
+    margin-bottom: 20px
+}
+
+.description {
+    width: 300px;
+    margin-bottom: 20px;
+}
