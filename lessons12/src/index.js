@@ -65,3 +65,8 @@ refs.btnContainer.addEventListener("click", evt => {
 });
 
 console.log(count);
+
+
+window.addEventListener('change', (evt) => {
+  console.log(evt)
+})
