@@ -1,0 +1,94 @@
+{
+  "authorization": [
+    {
+      "login": "Maksim",
+      "email": "test@email.com",
+      "password": "qwerty",
+      "id": 1
+    },
+    {
+      "login": "Maksim",
+      "email": "test2@email.com",
+      "password": "123456",
+      "id": 2
+    },
+    {
+      "login": "Maksim",
+      "email": "test@email.com",
+      "password": "qwerew",
+      "id": 3
+    },
+    {
+      "login": "Maksim",
+      "email": "test@email.com",
+      "password": "2",
+      "id": 4
+    },
+    {
+      "login": "Maksim",
+      "email": "test@email.com",
+      "password": "12",
+      "id": 5
+    },
+    {
+      "login": "",
+      "email": "",
+      "password": "",
+      "id": 6
+    },
+    {
+      "login": "Maksim",
+      "email": "test3@email.com",
+      "password": "12356",
+      "id": 7
+    },
+    {
+      "login": "Maksim",
+      "email": "test4@email.com",
+      "password": "12356",
+      "id": 8
+    },
+    {
+      "login": "Maksim",
+      "email": "test6@email.com",
+      "password": "12345",
+      "id": 9
+    },
+    {
+      "login": "Maksim",
+      "email": "test7@email.com",
+      "password": "12345",
+      "id": 10
+    },
+    {
+      "login": "Maksim",
+      "email": "test8@email.com",
+      "password": "12345",
+      "id": 11
+    },
+    {
+      "login": "Maksim",
+      "email": "test12@email.com",
+      "password": "34567",
+      "id": 12
+    },
+    {
+      "login": "Maksim",
+      "email": "test213@email.com",
+      "password": "2345678",
+      "id": 13
+    },
+    {
+      "login": "Maksim",
+      "email": "test90@email.com",
+      "password": "3456",
+      "id": 14
+    },
+    {
+      "login": "Maksa",
+      "email": "test91@email.com",
+      "password": "3456",
+      "id": 15
+    }
+  ]
+}
