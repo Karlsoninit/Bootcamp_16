@@ -1,0 +1,11 @@
+.defaultContainer {
+    padding: 20px;
+    width: 800px;
+    border: 1px solid green;
+    color: white
+}
+
+.newContainer {
+    composes: defaultContainer;
+    color: black
+}
