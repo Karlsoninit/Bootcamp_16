@@ -1,12 +1,14 @@
-import React from "react";
-import Post from "../components/post/Post";
-import Wrapper from "./wrapper/Wrapper";
-import { DATA } from "./data";
+import React from 'react';
+import Post from '../components/post/Post';
+import Wrapper from './wrapper/Wrapper';
+import { DATA } from './data';
+import * as css from './app.styled.js';
 
-const App = () => {
+const App = ({ title }) => {
   return (
     <>
-      <Wrapper style={{ backgroundColor: "tomato" }}>
+      <css.Title>{title}</css.Title>
+      <Wrapper style={{ backgroundColor: 'tomato' }}>
         <h2>WORK</h2>
       </Wrapper>
       <Post data={DATA} />
