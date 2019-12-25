@@ -1,0 +1,23 @@
+.container {
+    min-width: 180px;
+    max-width: 220px;
+    height: 145px;
+    border: 1px solid green;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.input {
+    display: none
+}
+
+.innerClickContainer {
+    min-width: 180px;
+    max-width: 220px;
+    height: 145px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+
+}

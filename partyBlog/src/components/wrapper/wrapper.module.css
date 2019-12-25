@@ -1,0 +1,10 @@
+.defaultContainer {
+    list-style: none;
+    padding: 10px
+}
+
+/* 
+.newContainer {
+    composes: defaultContainer;
+    color: black
+} */
