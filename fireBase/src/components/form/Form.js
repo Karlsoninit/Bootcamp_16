@@ -1,9 +1,13 @@
 import React, { Component } from "react";
 import shortId from "shortid";
-
+import Button from "@material-ui/core/Button";
+import Input from "../ui/input/Input";
+import DownloadFile from "../ui/downloadFile/DownloadFile";
+import styles from "./form.module.css";
 const initialState = {
   img: "",
-  text: ""
+  text: "",
+  description: ""
 };
 
 class Form extends Component {
@@ -14,46 +18,58 @@ class Form extends Component {
   onHandleSubmit = e => {
     e.preventDefault();
     console.log("submit");
+    console.log(this.state);
     this.props.getPost(this.state);
     this.setState({
       ...initialState
     });
   };
 
-  onHandleGetValue = e => {
+  handleValue = e => {
+    // console.log("test ---> ", e.target.value);
     const info = e.target.value;
     const name = e.target.name;
+    console.log(info);
+    console.log(name);
     this.setState(() => {
       const o = {
         [name]: info,
         id: shortId(),
         date: new Date().toJSON()
       };
-      console.log(o);
+      // console.log("-- o --", o);
       return o;
     });
   };
 
+  getPhoto = img => {
+    this.setState({ img });
+  };
+
   render() {
-    // console.log("rerender");
-    const { img, text } = this.state;
     return (
       <form onSubmit={this.onHandleSubmit}>
-        <input
-          value={img}
-          name="img"
-          onChange={this.onHandleGetValue}
-          type="text"
-          placeholder="download image"
-        />
-        <input
-          value={text}
-          name="text"
-          onChange={this.onHandleGetValue}
-          type="text"
-          placeholder="enter description ..."
-        />
-        <button type="submit">ADD</button>
+        <div className={styles.downloadContainer}>
+          <div className={styles.download}>
+            <DownloadFile label="Download" getPhoto={this.getPhoto} />
+          </div>
+          <div className={styles.buttonGroup}>
+            <Input handleValue={this.handleValue} name="text" label="Title" />
+            <Input
+              handleValue={this.handleValue}
+              name="description"
+              label="Descriptions"
+            />
+            <Button
+              type="submit"
+              variant="outlined"
+              color="secondary"
+              className={styles.btnSubmitForm}
+            >
+              Send
+            </Button>
+          </div>
+        </div>
       </form>
     );
   }

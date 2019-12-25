@@ -1,11 +1,10 @@
 .defaultContainer {
-    padding: 20px;
-    width: 800px;
-    border: 1px solid green;
-    color: white
+    list-style: none;
+    padding: 10px
 }
 
+/* 
 .newContainer {
     composes: defaultContainer;
     color: black
-}
+} */

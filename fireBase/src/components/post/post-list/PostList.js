@@ -1,20 +1,79 @@
-import React from "react";
-import styled from "./postList.module.css";
+// import React from "react";
+// import styled from "./postList.module.css";
 
-const PostList = ({ post: { text, id, img }, deletePost }) => {
+// const PostList = ({ post: { text, id, img }, deletePost }) => {
+//   return (
+//     <>
+//       <h2>{text}</h2>
+//       <img className={styled.image} src={img} alt={id} />
+//       <button
+//         onClick={() => {
+//           deletePost(id);
+//         }}
+//       >
+//         DELETE
+//       </button>
+//     </>
+//   );
+// };
+
+// export default PostList;
+
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Card from "@material-ui/core/Card";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import CardMedia from "@material-ui/core/CardMedia";
+import Button from "@material-ui/core/Button";
+import Typography from "@material-ui/core/Typography";
+
+const useStyles = makeStyles({
+  card: {
+    maxWidth: 345
+  },
+  media: {
+    height: 140
+  }
+});
+
+const PostList = ({ post: { text, id, img, description }, deletePost }) => {
+  const classes = useStyles();
+
   return (
-    <>
-      <h2>{text}</h2>
-      <img className={styled.image} src={img} alt={id} />
-      <button
-        onClick={() => {
-          console.log(id);
-          deletePost(id);
-        }}
-      >
-        DELETE
-      </button>
-    </>
+    <Card className={classes.card}>
+      <CardActionArea style={{ minWidth: 300 }}>
+        <CardMedia
+          className={classes.media}
+          image={img}
+          title="Contemplative Reptile"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+            {text}
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            {description ? (
+              description
+            ) : (
+              <p>
+                Lizards are a widespread group of squamate reptiles, with over
+                6,000 species, ranging across all continents except Antarctica
+              </p>
+            )}
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
+        <Button onClick={() => deletePost(id)} size="small" color="primary">
+          Delete
+        </Button>
+        {/* <Button size="small" color="primary">
+          Learn More
+        </Button> */}
+      </CardActions>
+    </Card>
   );
 };
 

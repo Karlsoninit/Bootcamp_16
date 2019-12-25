@@ -1,0 +1,16 @@
+.buttonGroup {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-end
+}
+
+.download {}
+
+.downloadContainer {
+    display: flex
+}
+
+.btnSubmitForm {
+    width: 30%;
+}

@@ -1,12 +1,12 @@
 import React from "react";
 import PostList from "./post-list/PostList";
 import Wrapper from "../wrapper/Wrapper";
-
+import css from "./postStyle.module.css";
 import PropTypes from "prop-types";
 
 const Post = ({ data, deletePost }) => {
   return (
-    <ul>
+    <ul className={css.container}>
       {Array.isArray(data) ? (
         data.map(elem => (
           <Wrapper key={elem.id}>

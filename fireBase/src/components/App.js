@@ -136,10 +136,6 @@ class App extends Component {
     return (
       <>
         <Form getPost={this.getPost} />
-        <button type="button" onClick={this.onHandleShowAll}>
-          ALL
-        </button>
-        <Select onHandleChange={this.onHandleChange} options={this.options()} />
         {data.length !== 0 ? (
           <>
             <Post

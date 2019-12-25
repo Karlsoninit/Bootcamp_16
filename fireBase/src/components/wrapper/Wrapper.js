@@ -10,7 +10,7 @@ const Wrapper = props => {
   return (
     <li
       style={{ ...props.style }}
-      className={props.style ? css.defaultContainer : css.newContainer}
+      className={(props.style, css.defaultContainer)}
     >
       {props.children}
     </li>
