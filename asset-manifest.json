@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Bootcamp_16/./static/css/main.e4f9a0b7.chunk.css",
-    "main.js": "/Bootcamp_16/./static/js/main.5d3a4e45.chunk.js",
-    "main.js.map": "/Bootcamp_16/./static/js/main.5d3a4e45.chunk.js.map",
+    "main.css": "/Bootcamp_16/./static/css/main.433d8070.chunk.css",
+    "main.js": "/Bootcamp_16/./static/js/main.46c772db.chunk.js",
+    "main.js.map": "/Bootcamp_16/./static/js/main.46c772db.chunk.js.map",
     "runtime-main.js": "/Bootcamp_16/./static/js/runtime-main.f1a525c6.js",
     "runtime-main.js.map": "/Bootcamp_16/./static/js/runtime-main.f1a525c6.js.map",
     "static/js/2.5bf31ff0.chunk.js": "/Bootcamp_16/./static/js/2.5bf31ff0.chunk.js",
     "static/js/2.5bf31ff0.chunk.js.map": "/Bootcamp_16/./static/js/2.5bf31ff0.chunk.js.map",
     "index.html": "/Bootcamp_16/./index.html",
-    "precache-manifest.aa67c832a7e8ae0396a8b82b636f5aa1.js": "/Bootcamp_16/./precache-manifest.aa67c832a7e8ae0396a8b82b636f5aa1.js",
+    "precache-manifest.fea1218ba8d262d37caade9c3b61fba0.js": "/Bootcamp_16/./precache-manifest.fea1218ba8d262d37caade9c3b61fba0.js",
     "service-worker.js": "/Bootcamp_16/./service-worker.js",
-    "static/css/main.e4f9a0b7.chunk.css.map": "/Bootcamp_16/./static/css/main.e4f9a0b7.chunk.css.map",
+    "static/css/main.433d8070.chunk.css.map": "/Bootcamp_16/./static/css/main.433d8070.chunk.css.map",
     "static/js/2.5bf31ff0.chunk.js.LICENSE": "/Bootcamp_16/./static/js/2.5bf31ff0.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.f1a525c6.js",
     "static/js/2.5bf31ff0.chunk.js",
-    "static/css/main.e4f9a0b7.chunk.css",
-    "static/js/main.5d3a4e45.chunk.js"
+    "static/css/main.433d8070.chunk.css",
+    "static/js/main.46c772db.chunk.js"
   ]
 }

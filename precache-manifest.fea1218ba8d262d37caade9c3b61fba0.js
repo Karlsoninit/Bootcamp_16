@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9f244793d82e4a2e2a5301b5471ff824",
+    "revision": "a1cfa116500bc1a5ed377e333113cbb8",
     "url": "/Bootcamp_16/./index.html"
   },
   {
-    "revision": "0a24545fa76669cd13a5",
-    "url": "/Bootcamp_16/./static/css/main.e4f9a0b7.chunk.css"
+    "revision": "c9543026543c2a1f7a2c",
+    "url": "/Bootcamp_16/./static/css/main.433d8070.chunk.css"
   },
   {
     "revision": "a98d036ffda58f0d9e7f",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Bootcamp_16/./static/js/2.5bf31ff0.chunk.js.LICENSE"
   },
   {
-    "revision": "0a24545fa76669cd13a5",
-    "url": "/Bootcamp_16/./static/js/main.5d3a4e45.chunk.js"
+    "revision": "c9543026543c2a1f7a2c",
+    "url": "/Bootcamp_16/./static/js/main.46c772db.chunk.js"
   },
   {
     "revision": "311fc726f2586f3c68ab",
