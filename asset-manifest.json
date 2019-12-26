@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Bootcamp_16/./static/css/main.e405158d.chunk.css",
-    "main.js": "/Bootcamp_16/./static/js/main.583cf19d.chunk.js",
-    "main.js.map": "/Bootcamp_16/./static/js/main.583cf19d.chunk.js.map",
+    "main.js": "/Bootcamp_16/./static/js/main.027d16cf.chunk.js",
+    "main.js.map": "/Bootcamp_16/./static/js/main.027d16cf.chunk.js.map",
     "runtime-main.js": "/Bootcamp_16/./static/js/runtime-main.f1a525c6.js",
     "runtime-main.js.map": "/Bootcamp_16/./static/js/runtime-main.f1a525c6.js.map",
     "static/js/2.45405952.chunk.js": "/Bootcamp_16/./static/js/2.45405952.chunk.js",
     "static/js/2.45405952.chunk.js.map": "/Bootcamp_16/./static/js/2.45405952.chunk.js.map",
     "index.html": "/Bootcamp_16/./index.html",
-    "precache-manifest.18af1059f26c3265651fcc477bfc91f0.js": "/Bootcamp_16/./precache-manifest.18af1059f26c3265651fcc477bfc91f0.js",
+    "precache-manifest.87cbe561e4bed0ccc024fd046bae1dd3.js": "/Bootcamp_16/./precache-manifest.87cbe561e4bed0ccc024fd046bae1dd3.js",
     "service-worker.js": "/Bootcamp_16/./service-worker.js",
     "static/css/main.e405158d.chunk.css.map": "/Bootcamp_16/./static/css/main.e405158d.chunk.css.map",
     "static/js/2.45405952.chunk.js.LICENSE": "/Bootcamp_16/./static/js/2.45405952.chunk.js.LICENSE"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.f1a525c6.js",
     "static/js/2.45405952.chunk.js",
     "static/css/main.e405158d.chunk.css",
-    "static/js/main.583cf19d.chunk.js"
+    "static/js/main.027d16cf.chunk.js"
   ]
 }
