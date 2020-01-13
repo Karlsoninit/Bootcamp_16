@@ -2,38 +2,47 @@ import React, { Component } from "react";
 import axios from "axios";
 import Post from "../components/post/Post";
 import Form from "./form/Form";
-import Default from "./default/Default";
+// import Default from "./default/Default";
+import Spinner from "../components/ui/spinner/Spinner";
+
+axios.defaults.baseURL = "https://news-9cced.firebaseio.com";
+
+const mobileContainer = () => ({
+  mobile: {
+    display: "flex",
+    flexDirection: "column",
+    maxWidth: 500,
+    alignItem: "center"
+  }
+});
 
 class App extends Component {
   state = {
     data: [],
-    news: [],
-    isChange: false
+    isChange: false,
+    loader: true,
+    chooseLoader: null
   };
 
   getPost = async post => {
-    const response = await axios.post(
-      "https://news-9cced.firebaseio.com/post.json",
-      post
-    );
-    console.log("response ----> ", response);
-
-    this.setState(prev => {
-      return {
-        data: [post, ...prev.data]
-      };
-    });
-
-    this.fetchPost();
+    try {
+      this.setState({ loader: true, chooseLoader: "post" });
+      await axios.post("/post.json", post);
+      this.setState(prev => {
+        return {
+          data: [post, ...prev.data],
+          loader: false
+        };
+      });
+      this.fetchPost();
+    } catch (e) {
+      console.warn(e);
+    }
   };
 
   deletePost = async id => {
-    console.log("delete", id);
     try {
-      const del = await axios.delete(
-        `https://news-9cced.firebaseio.com/post/${id}.json`
-      );
-      console.log(del);
+      await axios.delete(`/post/${id}.json`);
     } catch (e) {
       console.log(e);
     }
@@ -47,9 +56,7 @@ class App extends Component {
 
   fetchPost = async () => {
     try {
-      const response = await axios.get(
-        "https://news-9cced.firebaseio.com/post.json"
-      );
+      const response = await axios.get("/post.json");
 
       const post = Object.keys(response.data)
         .map(post => ({
@@ -59,7 +66,8 @@ class App extends Component {
         .reverse();
 
       this.setState({
-        data: post
+        data: post,
+        loader: false
       });
     } catch (e) {
       console.log(e);
@@ -67,7 +75,6 @@ class App extends Component {
   };
 
   componentDidMount = async () => {
-    console.log("componentDidMount first");
     this.fetchPost();
   };
 
@@ -78,19 +85,20 @@ class App extends Component {
   };
 
   render() {
-    const { data } = this.state;
-
+    const { data, loader, chooseLoader } = this.state;
+    // console.log("test loader", loader);
+    const mobileStyles = mobileContainer();
     return (
-      <>
+      <div style={window.innerWidth < 768 ? mobileStyles.mobile : null}>
         <Form getPost={this.getPost} />
-        {data.length !== 0 ? (
+        {!loader ? (
           <>
             <Post deletePost={this.deletePost} data={data} />
           </>
         ) : (
-          <Default />
+          <Spinner chooseLoader={chooseLoader} />
         )}
-      </>
+      </div>
     );
   }
 }

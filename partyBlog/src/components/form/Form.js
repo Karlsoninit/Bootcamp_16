@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import shortId from "shortid";
+
 import Button from "@material-ui/core/Button";
 import Input from "../ui/input/Input";
 import DownloadFile from "../ui/downloadFile/DownloadFile";
@@ -38,7 +38,6 @@ class Form extends Component {
         [name]: info,
         date: new Date().toJSON()
       };
-      // console.log("-- o --", o);
       return o;
     });
   };
@@ -87,6 +86,4 @@ class Form extends Component {
       </div>
     );
   }
-}
-
 export default Form;

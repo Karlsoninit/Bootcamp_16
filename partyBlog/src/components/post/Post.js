@@ -5,8 +5,6 @@ import css from "./postStyle.module.css";
 import PropTypes from "prop-types";
 
 const Post = ({ data, deletePost }) => {
-  console.log(data);
-  console.log(data[0].id);
   return (
     <ul className={css.container}>
       {Array.isArray(data) ? (

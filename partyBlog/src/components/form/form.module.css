@@ -11,7 +11,8 @@
     display: flex;
     width: 100%;
     align-items: center;
-    margin-bottom: 10px
+    margin-bottom: 10px;
+
 }
 
 .btnSubmitForm {

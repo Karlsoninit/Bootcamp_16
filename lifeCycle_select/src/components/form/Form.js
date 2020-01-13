@@ -35,7 +35,7 @@ class Form extends Component {
   };
 
   render() {
-    console.log("rerender");
+    // console.log("rerender");
     const { img, text } = this.state;
     return (
       <form onSubmit={this.onHandleSubmit}>
