@@ -1,10 +1,14 @@
 import Type from "./types";
-import { deleteItem } from "./actionCreater";
+import { deleteItem, transform } from "./actionCreater";
 const initialState = [];
 
 const handlers = {
-  [Type.ADD_TASK]: (state, { payload }) => [...state, payload],
+  [Type.ADD_TASK]: (state, { payload }) => {
+    console.log("transform", transform(payload));
+    return [payload, ...state];
+  },
   [Type.DELETE_TASK]: (state, { payload }) => deleteItem(state, payload),
+  [Type.FETCH_ALL_TASKS]: (state, { payload }) => transform(payload),
   DEFAULT: state => state
 };
 

@@ -5,7 +5,12 @@ export const addTask = task => ({
   payload: task
 });
 
-export const deleteTask = (id, flag = true) => ({
+export const deleteTask = id => ({
   type: Type.DELETE_TASK,
-  payload: { id, meta: flag }
+  payload: id
+});
+
+export const fetchAllTasks = tasks => ({
+  type: Type.FETCH_ALL_TASKS,
+  payload: tasks
 });

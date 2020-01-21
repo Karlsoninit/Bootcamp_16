@@ -9,9 +9,8 @@ class App extends Component {
     isOpen: false
   };
 
-  componentDidMount() {
-    // this.setState({ isOpen: true });
-    console.log(this.props);
+  async componentDidMount() {
+    this.props.getFetchAllTask();
   }
 
   handleClick = () => {
@@ -20,12 +19,13 @@ class App extends Component {
 
   save = task => {
     this.props.addTask(task);
+    this.props.addFetch(task);
   };
 
   render() {
     const { isOpen } = this.state;
     const { tasks } = this.props;
-    console.log(tasks);
+    console.log("tasks delete :", tasks);
     return (
       <>
         <Input save={this.save} />
