@@ -1,18 +1,29 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
-import { addTask } from "../../redux/taskActions";
 
 class Input extends Component {
   state = {
     task: ""
   };
 
-  handleSubmit = e => {
+  componentDidMount() {
+    console.log("wait options inner input", this.props);
+    console.log("new tasks");
+    this.props.getTasks();
+  }
+
+  handleSubmit = async e => {
     e.preventDefault();
-    this.props.add({
+    const task = {
       task: this.state.task,
       date: new Date().toLocaleDateString()
-    });
+    };
+    this.props.addTask(task);
+
+    // this.props.addTasksAll(task);
+
+    await this.props.fetchPost(task);
+
+    await this.props.getTasks();
     this.setState({ task: "" });
   };
 
@@ -20,6 +31,7 @@ class Input extends Component {
     const value = e.target.value;
     this.setState({ task: value });
   };
+
   render() {
     const { task } = this.state;
     return (
@@ -31,26 +43,4 @@ class Input extends Component {
   }
 }
 
-// const mapStateToProps = state => ({});
-
-// const mapDispatchToProps = {
-//   addTask
-// };
-
-// const mapDispatchToProps = x => ({
-//   add: () =>
-// });
-
-const mapDispatchToProps = x => {
-  return {
-    add: value => {
-      const up = value => ({
-        ...value,
-        task: value.task.toUpperCase()
-      });
-      x(addTask(up(value)));
-    }
-  };
-};
-
-export default connect(null, mapDispatchToProps)(Input);
+export default Input;

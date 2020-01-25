@@ -10,6 +10,37 @@ const task = (state = {}, { type, payload }) => {
   }
 };
 
+const allTasks = (state = [], { type, payload }) => {
+  switch (type) {
+    case Type.ADD_TASKS_ALL:
+      return payload;
+    case Type.DELETE_TASK:
+      return state.filter(task => task.id !== payload);
+    default:
+      return state;
+  }
+};
+const errors = (state = null, { type, payload }) => {
+  switch (type) {
+    case Type.FETCH_ERROR:
+      return payload;
+    default:
+      return state;
+  }
+};
+
+const success = (state = false, { type, payload }) => {
+  switch (type) {
+    case Type.START_SUCCESS:
+      return true;
+    default:
+      return state;
+  }
+};
+
 export default combineReducers({
-  task
+  task,
+  allTasks,
+  errors,
+  success
 });
