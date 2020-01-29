@@ -37,7 +37,7 @@ class App extends Component {
       <>
         <Input save={this.save} />
         <Todos data={tasks} deleteTask={this.deleteTask} />
-        {/* <button onClick={this.handleClick}>SHOW</button> */}
+        <button onClick={this.handleClick}>SHOW</button>
         <CSSTransition
           in={isOpen}
           timeout={2000}
@@ -45,7 +45,7 @@ class App extends Component {
           mountOnEnter
           unmountOnExit
         >
-          {/* <DropDown data={tasks} /> */}
+          <DropDown data={tasks} />
         </CSSTransition>
       </>
     );

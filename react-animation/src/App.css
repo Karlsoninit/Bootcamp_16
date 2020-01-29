@@ -1,0 +1,34 @@
+
+
+.drop-enter {
+  opacity: 0;
+  transform: translateX(-200px);
+  /* animation: drop 1s forwards; */
+}
+
+.drop-enter-active {
+  opacity: 1;
+  transition: 2000ms linear;
+  transform: translateX(0);
+  /* animation: drop 1s forwards; */
+}
+
+.drop-exit-active {
+  opacity: 0;
+  transition: 2000ms linear;
+  transform: translateX(-200px);
+  animation: drop 1000ms ease-in;
+}
+
+/* .drop-enter-done {
+  background-color: aqua !important;
+} */
+
+@keyframes drop {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(30px);
+  }
+}
