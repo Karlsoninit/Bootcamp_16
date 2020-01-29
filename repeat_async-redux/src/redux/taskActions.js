@@ -24,4 +24,8 @@ export const fetchError = er => ({
   payload: er
 });
 
+export const logout = () => ({
+  type: Type.LOGOUT_DONE
+});
+
 // export { addTask, addTasksAll, deleteTask, fetchError };

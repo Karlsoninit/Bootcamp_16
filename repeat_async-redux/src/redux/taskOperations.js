@@ -21,7 +21,7 @@ const transformFetch = data => {
 export const fetchPost = task => async dispatch => {
   try {
     const data = await axios.post(
-      `${process.env.REACT_APP_URL}/tasks.json`,
+      `${process.env.REACT_APP_URL}/wishlist.json`,
       task
     );
     dispatch(startSuccess());
@@ -33,7 +33,7 @@ export const fetchPost = task => async dispatch => {
 
 export const getTasks = () => async dispatch => {
   try {
-    const data = await axios.get(`${process.env.REACT_APP_URL}/tasks.json`);
+    const data = await axios.get(`${process.env.REACT_APP_URL}/wishlist.json`);
     // console.log("get firebase", data);
     dispatch(addTasksAll(transformFetch(data.data)));
 
@@ -46,7 +46,7 @@ export const getTasks = () => async dispatch => {
 export const deleteItem = id => async dispatch => {
   try {
     const data = await axios.delete(
-      `${process.env.REACT_APP_URL}/tasks/${id}.json`
+      `${process.env.REACT_APP_URL}/wishlist/${id}.json`
     );
     dispatch(deleteTask(id));
     console.log("delete", data);

@@ -16,10 +16,13 @@ const allTasks = (state = [], { type, payload }) => {
       return payload;
     case Type.DELETE_TASK:
       return state.filter(task => task.id !== payload);
+    case Type.LOGOUT_DONE:
+      return [];
     default:
       return state;
   }
 };
+
 const errors = (state = null, { type, payload }) => {
   switch (type) {
     case Type.FETCH_ERROR:
@@ -29,14 +32,17 @@ const errors = (state = null, { type, payload }) => {
   }
 };
 
-const success = (state = false, { type, payload }) => {
+const success = (state = true, { type, payload }) => {
   switch (type) {
     case Type.START_SUCCESS:
       return true;
+    case Type.LOGOUT_DONE:
+      return false;
     default:
       return state;
   }
 };
+
 
 export default combineReducers({
   task,

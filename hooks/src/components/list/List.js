@@ -16,6 +16,7 @@ export const List = () => {
     // addWish({ title: wish });
     dispatch(addAction(wish));
     addWish({ title: wish });
+    setWish("");
   };
 
   const handleChange = evt => {

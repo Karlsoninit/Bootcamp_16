@@ -5,6 +5,7 @@ import app from "./base";
 
 const App = () => {
   const [auth, setAuth] = useState(null);
+  console.log(auth);
   useEffect(() => {
     app.auth().onAuthStateChanged(setAuth);
   }, [auth]);

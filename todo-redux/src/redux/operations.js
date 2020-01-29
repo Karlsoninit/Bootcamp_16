@@ -9,7 +9,10 @@ export const addFetch = task => async dispatch => {
     );
     console.log("save :", JSON.parse(data.config.data));
     dispatch(addTask(JSON.parse(data.config.data)));
-  } catch (e) {}
+  } catch (e) {
+      console.log(e)
+      throw e
+  }
 };
 
 export const getFetchAllTask = () => async dispatch => {
