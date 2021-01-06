@@ -22,7 +22,7 @@
     "webpack-dev-server": "^3.9.0"
   },
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "give-me-a-joke": "^0.1.2",
     "handlebars": "^4.5.3",
     "handlebars-loader": "^1.7.1",
